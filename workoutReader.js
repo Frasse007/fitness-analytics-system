@@ -6,6 +6,7 @@ async function readWorkoutData(filepath) {
         const results = [];
 
         fs.createReadStream(filepath)
+            .on('error', (error) => reject(error))
             .pipe(csv())
             .on('data', (row) => {
                 results.push(row);
