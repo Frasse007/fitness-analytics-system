@@ -4,7 +4,7 @@ const { Readable } = require('stream');
 
 jest.mock('fs');
 
-describe('workoutCalculator', () => {
+describe('tests workoutCalculator and readWorkoutData', () => {
     beforeEach(() => {
         jest.clearAllMocks();
     });
